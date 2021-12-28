@@ -6,9 +6,11 @@
 const http = require('http');
 const url = require('url');
 const StringDecoder = require('string_decoder').StringDecoder;
-const config = require('./config');
+const config = require('./lib/config');
 const fs = require('fs');
 const _data = require('./lib/data');
+const handlers = require('./lib/handlers');
+const helpers = require('./lib/helpers');
 
 // server prototype
 const unifiedServer = (req, res) => {
@@ -36,7 +38,7 @@ const unifiedServer = (req, res) => {
     // choose the handler w this request shoiuld go  to
     const choosenHandler = router[trimmedPath] || handlers.notFound;
     const data = {
-      payload: buffer,
+      payload: helpers.parseJsonToObject(buffer),
       trimmedPath,
       queryStringObject,
       method,
@@ -71,15 +73,10 @@ httpServer.listen(config.httpPort, () => {
 httpsServer.listen(config.httpsPort, () => {
   console.log(`server is listening on port ${config.httpsPort}`);
 });
-const handlers = {};
 
-handlers.ping = (data, callback) => {
-  callback(200);
-};
-handlers.notFound = (data, callback) => {
-  callback();
-};
 // router
 const router = {
   ping: handlers.ping,
+  users: handlers.users,
+  tokens: handlers.tokens,
 };
