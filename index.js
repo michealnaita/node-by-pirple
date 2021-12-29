@@ -4,11 +4,11 @@
 
 // Dependencies
 const http = require('http');
+const https = require('https');
 const url = require('url');
 const StringDecoder = require('string_decoder').StringDecoder;
 const config = require('./lib/config');
 const fs = require('fs');
-const _data = require('./lib/data');
 const handlers = require('./lib/handlers');
 const helpers = require('./lib/helpers');
 
@@ -60,7 +60,7 @@ const httpsServerOptions = {
   cert: fs.readFileSync('./https/cert.pem'),
 };
 
-const httpsServer = http.createServer(httpsServerOptions, (req, res) =>
+const httpsServer = https.createServer(httpsServerOptions, (req, res) =>
   unifiedServer(req, res)
 );
 
