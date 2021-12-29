@@ -1,0 +1,8 @@
+{
+  "id": "sqb2b1v2n83gnlxw8ssc",
+  "userPhone": "2560000000",
+  "protocol": "http",
+  "url": "yahoo.com",
+  "successCodes": [200, 404],
+  "timeoutSeconds": 4
+}
