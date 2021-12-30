@@ -1,8 +1,1 @@
-{
-  "firstname": "joe",
-  "lastname": false,
-  "phone": "2560000000",
-  "hashedPassword": "c649b03294a11dd79dd73f35708e5e68ca2de88dd19e7051ac33af216e2e8f9b",
-  "tosAgreement": true,
-  "checks": ["2siqhjg1skexwcfkwppp", "sqb2b1v2n83gnlxw8ssc"]
-}
+{"firstname":"joe","lastname":false,"phone":"2560000000","hashedPassword":"c649b03294a11dd79dd73f35708e5e68ca2de88dd19e7051ac33af216e2e8f9b","tosAgreement":true,"checks":["2siqhjg1skexwcfkwppp","sqb2b1v2n83gnlxw8ssc","4lxf6qd9507h5teze5k6"]}
