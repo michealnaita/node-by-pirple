@@ -1,3 +1,9 @@
 {
-  "users": {}
+  "users": {},
+  "checks": {},
+  "logs": {},
+  "help": {},
+  "stats": {},
+  "shutdown": {},
+  "exit": {}
 }
