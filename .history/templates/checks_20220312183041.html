@@ -87,6 +87,12 @@
     >
       add
     </div>
-   <!-- @use scripts -->
+   <script type='text/javascript'>
+     const appToken = window.sessionStorage.getItem('app_token')
+     window.onload = () =>{
+       getChecks()
+     }
+     
+   </script>
   </body>
 </html>
