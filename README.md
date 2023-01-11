@@ -21,7 +21,15 @@ This uses in built node modules that are shipped with node to create a website t
    git clone https:github.com/michealnaita/node-by-pirple api && cd ./api
    ```
 
-2. set enviromental variables for application
+2. Add data and logs folders
+
+   ```sh
+   mkdir -p ./.data/checks ./.data/tokens ./.data/users ./.logs/checks ./.logs/errors
+
+
+   ```
+
+3. set enviromental variables for application
    In your terminal
 
    ```sh
@@ -32,7 +40,7 @@ This uses in built node modules that are shipped with node to create a website t
     NODE_ENV=development
    ```
 
-3. make sure that node is installed on your system
+4. make sure that node is installed on your system
 
    ```sh
    node --version
@@ -40,11 +48,11 @@ This uses in built node modules that are shipped with node to create a website t
 
    or folow installation [guide](https://nodejs.org/en/download/package-manager/)
 
-4. Run application
+5. Run application
    ```sh
    node index.js
    ```
-5. Test using [Postman](https://www.postman.com)
+6. Test using [Postman](https://www.postman.com)
    > Note: All routes are protected therefore you need to create account get token, then set token in header under the key: token
 
 ## Routes
